@@ -54,5 +54,5 @@ def create_game(user: User, config: Config) -> Game:
     )
 
     game = game_function(user, config)
-    actions.add_actions(game, config)
+    actions.add_actions(game, user, config)
     return game

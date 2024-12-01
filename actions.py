@@ -1,18 +1,18 @@
 
 from osu.bancho.constants import StatusAction
-from config import Leaderboard, Config
+from config import Leaderboard, Config, User
 from osu import Game
 
 import random
 
-def send_message(game: Game, user_messages: list):
+def send_message(game: Game, user_messages: list, target: str):
     if not game.bancho.connected:
         return
 
     if not user_messages:
         return
 
-    channel = game.bancho.channels.get("#osu")
+    channel = game.bancho.channels.get(target)
 
     if not channel:
         return
@@ -66,19 +66,19 @@ def change_status(game: Game):
 
     game.bancho.update_status()
 
-def add_actions(game: Game, config: Config):
+def add_actions(game: Game, user: User, config: Config):
     if config.Flags.EnableSpectating:
         game.tasks.register(seconds=5)(
-            lambda: spectate(game, config.SpectatorId)
+            lambda: spectate(game, user.SpectatorTargetId)
         )
 
     if config.Flags.EnableMessages:
-        game.tasks.register(seconds=5, loop=True)(
-            lambda: send_message(game, config.Messages)
+        game.tasks.register(seconds=2, loop=True)(
+            lambda: send_message(game, user.Messages, user.MessageTargetChannel)
         )
 
     if config.Flags.EnableStatusUpdates:
-        game.tasks.register(seconds=5, loop=True)(
+        game.tasks.register(seconds=2, loop=True)(
             lambda: change_status(game)
         )
 
