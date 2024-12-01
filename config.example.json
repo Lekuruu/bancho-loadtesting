@@ -43,6 +43,6 @@
         "BeatmapFilename": "xi - FREEDOM DiVE (Nakagawa-Kanon) [Ono's Taiko Oni].osu",
         "BeatmapHash": "af64a0c336dfd9190e081ef8ff370629",
         "BeatmapsetId": 39804,
-        "RequestIntervalMs": 5000
+        "RequestIntervalMs": 1000
     }
 }
