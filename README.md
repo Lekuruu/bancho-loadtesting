@@ -22,11 +22,11 @@ Then, follow these steps:
     pip install -r requirements.txt
     ```
 
-3. Set up the configuration: Copy the example configuration file and modify it as needed:
+3. Set up the configuration:
 
     ```shell
     cp config.example.json config.json
-    # Open and edit config.json with your preferred editor...
+    # Open and edit the config.json with your preferred editor...
     ```
 
 4. Run the tool:
