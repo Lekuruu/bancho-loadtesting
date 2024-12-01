@@ -1,0 +1,48 @@
+{
+    "Connection": {
+        "Domain": "localhost",
+        "Workers": 5,
+        "TCP": {
+            "Enabled": false,
+            "IP": "127.0.0.1",
+            "Port": 13381,
+            "Version": 20130606,
+            "ExecutableHash": ""
+        }
+    },
+    "Flags": {
+        "EnableMessages": true,
+        "EnableStatusUpdates": true,
+        "EnableSpectating": false,
+        "EnableLeaderboardRequests": false
+    },
+    "Users": [
+        {
+            "Username": "peppy",
+            "Password": "password",
+            "Messages": [
+                "hi chat",
+                "server is dead, no idea how to fix"
+            ],
+            "SpectatorTargetId": 3,
+            "MessageTargetChannel": "#osu"
+        },
+        {
+            "Username": "SomeOtherUser",
+            "Password": "password",
+            "Messages": [
+                "hiii",
+                "hello",
+                "how are you"
+            ],
+            "SpectatorTargetId": 2,
+            "MessageTargetChannel": "#osu"
+        }
+    ],
+    "Leaderboard": {
+        "BeatmapFilename": "xi - FREEDOM DiVE (Nakagawa-Kanon) [Ono's Taiko Oni].osu",
+        "BeatmapHash": "af64a0c336dfd9190e081ef8ff370629",
+        "BeatmapsetId": 39804,
+        "RequestIntervalMs": 5000
+    }
+}
