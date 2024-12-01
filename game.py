@@ -12,7 +12,7 @@ def create_collection(config: Config) -> List[Game]:
     ]
 
 def create_chunk(config: Config, worker_index: int) -> List[Game]:
-    chunk_size = len(config.Users) // config.Connection.Workers
+    chunk_size = len(config.Users) // min(config.Connection.Workers, len(config.Users))
 
     if chunk_size <= 0 and worker_index < len(config.Users) - 1:
         return []
