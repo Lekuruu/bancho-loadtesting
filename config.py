@@ -10,13 +10,13 @@ class TcpSettings:
     Enabled: bool
     IP: str
     Port: int
-    Version: int
-    ExecutableHash: str
 
 @dataclass
 class Connection:
     Domain: str
     Workers: int
+    Version: int
+    ExecutableHash: str
     TCP: TcpSettings
 
 @dataclass

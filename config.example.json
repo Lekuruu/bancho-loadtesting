@@ -2,12 +2,12 @@
     "Connection": {
         "Domain": "localhost",
         "Workers": 5,
+        "Version": 20241030,
+        "ExecutableHash": "8be5ec016f276afebd08444febf5028e",
         "TCP": {
             "Enabled": false,
             "IP": "127.0.0.1",
-            "Port": 13381,
-            "Version": 20130606,
-            "ExecutableHash": ""
+            "Port": 13381
         }
     },
     "Flags": {

@@ -30,10 +30,10 @@ def create_tcp_game(user: User, config: Config) -> TcpGame:
         user.Username,
         user.Password,
         config.Connection.Domain,
-        config.Connection.TCP.Version,
-        config.Connection.TCP.ExecutableHash,
+        config.Connection.Version,
+        config.Connection.ExecutableHash,
         config.Connection.TCP.IP,
-        config.Connection.TCP.Port,
+        config.Connection.TCP.Port
     )
 
 def create_http_game(user: User, config: Config) -> Game:
@@ -41,6 +41,9 @@ def create_http_game(user: User, config: Config) -> Game:
         user.Username,
         user.Password,
         config.Connection.Domain,
+        "stable40",
+        config.Connection.Version,
+        config.Connection.ExecutableHash
     )
 
 def create_game(user: User, config: Config) -> Game:
