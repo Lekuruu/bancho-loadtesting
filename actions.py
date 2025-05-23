@@ -73,12 +73,12 @@ def add_actions(game: Game, user: User, config: Config):
         )
 
     if config.Flags.EnableMessages:
-        game.tasks.register(seconds=2, loop=True)(
+        game.tasks.register(seconds=3, loop=True)(
             lambda: send_message(game, user.Messages, user.MessageTargetChannel)
         )
 
     if config.Flags.EnableStatusUpdates:
-        game.tasks.register(seconds=2, loop=True)(
+        game.tasks.register(seconds=15, loop=True)(
             lambda: change_status(game)
         )
 
