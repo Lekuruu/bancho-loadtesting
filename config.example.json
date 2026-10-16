@@ -4,10 +4,25 @@
         "Workers": 5,
         "Version": 20241030,
         "ExecutableHash": "8be5ec016f276afebd08444febf5028e",
-        "TCP": {
-            "Enabled": false,
-            "IP": "127.0.0.1",
-            "Port": 13381
+        "Connector": {
+            "Type": "http",
+            "Http": {
+                "Domain": null
+            },
+            "Tcp": {
+                "Ip": "127.0.0.1",
+                "Port": 13381
+            },
+            "WebSocket": {
+                "Url": null,
+                "Path": "/",
+                "Secure": true,
+                "Headers": {},
+                "OpenTimeout": 10,
+                "PingInterval": 20,
+                "PingTimeout": 20,
+                "CloseTimeout": 10
+            }
         }
     },
     "Flags": {

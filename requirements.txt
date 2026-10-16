@@ -1,1 +1,1 @@
-osu>=1.4.11
+osu[websockets]==1.5.4

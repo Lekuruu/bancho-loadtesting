@@ -5,7 +5,7 @@ from multiprocessing import Pool, Process
 from threading import Thread
 from config import Config
 from typing import List
-from osu import TcpGame
+from osu import Game
 
 import logging
 import signal
@@ -24,7 +24,7 @@ def setup_logging():
     logging.getLogger('#osu').setLevel(logging.WARNING)
     logging.getLogger('#announce').setLevel(logging.WARNING)
 
-def run_game_thread(client: TcpGame, delay: int = 0.15) -> Thread:
+def run_game_thread(client: Game, delay: int = 0.15) -> Thread:
     thread = Thread(target=client.run)
     thread.start()
     time.sleep(delay)
